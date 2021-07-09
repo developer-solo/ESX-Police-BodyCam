@@ -22,6 +22,12 @@ ESX.RegisterServerCallback('solo_bodycam:getName', function(source, cb)
     cb(string.upper(name.firstname .. " " .. name.lastname))
 end)
 
+ESX.RegisterUsableItem('bodycam', function(source)
+ local source = tonumber(source)
+ local xPlayer = ESX.GetPlayerFromId(source)
+ TriggerClientEvent('solo_bodycam:itembodycam', source, xPlayer.getInventoryItem('bodycam').count)
+end)
+
 if GetCurrentResourceName() ~= "solo_bodycam" then
     print("                                             #")
     print("                                             ###")

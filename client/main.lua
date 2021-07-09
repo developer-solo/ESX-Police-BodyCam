@@ -30,6 +30,11 @@ end
 
 local axonOn = false
 
+RegisterNetEvent('solo_bodycam:itembodycam')
+AddEventHandler('solo_bodycam:itembodycam', function(source)
+	ExecuteCommand('bodycam')
+end)
+
 Citizen.CreateThread(function()
   while true do
 		Citizen.Wait(20000)

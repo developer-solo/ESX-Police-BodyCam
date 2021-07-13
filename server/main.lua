@@ -27,16 +27,3 @@ ESX.RegisterUsableItem('bodycam', function(source)
  local xPlayer = ESX.GetPlayerFromId(source)
  TriggerClientEvent('solo_bodycam:itembodycam', source, xPlayer.getInventoryItem('bodycam').count)
 end)
-
-if GetCurrentResourceName() ~= "solo_bodycam" then
-    print("                                             #")
-    print("                                             ###")
-    print("###### ###### ###### ###### ######  ##############")
-    print("#      #    # #    # #    # #    #  ################    Rename the script  '" .. GetCurrentResourceName() .. "' back to  'solo_bodycam'")
-    print("###    ###### ###### #    # ######  ##################  Do not rename the script!")
-    print("#      # ##   # ##   #    # # ##    ################    Why change it when you didn't do it !!!")
-    print("###### #   ## #   ## ###### #   ##  ##############")
-    print("                                             ###")
-    print("                                             #")
-    StopResource(GetCurrentResourceName())
-end
